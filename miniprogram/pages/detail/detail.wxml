@@ -1,0 +1,24 @@
+<!-- 轮播图 -->
+<swiper>
+  <swiper-item  wx:for="{{detailinfo.detailimg}}" wx:key="_id" >
+    <image bindtap="preview" src="{{item}}" data-current1="{{item}}"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 商品描述 -->
+<view class="introducebox">
+
+    <view class="detailprice">￥{{detailinfo.price}}/kg</view>
+    <view class="introduce">{{detailinfo.introduce}}</view>
+    <view class="lastnum">库存{{detailinfo.num}}kg</view>
+    <view class="{{iscollected?'collectafter':'collectbefore'}}" bindtap="collectchange">收藏</view>
+</view>
+<view height class="sender">卖家名称：{{detailinfo.sender.length==0?"缺少卖家信息":detailinfo.sender}}</view>
+
+
+
+
+<view class="footer">
+  <button class="cartsum" bindtap="cartadd">加入购物车</button>
+  <button class="submitorder" bindtap="pushorder">去结算</button>
+</view>

@@ -1,0 +1,19 @@
+/* pages/admin_order/admin_order.wxss */
+.order{
+  height: 15%;
+  background-color: #eee;
+  width: 96%;
+  margin: 2rpx auto;
+  display: flex;
+  flex-direction: column
+}
+image{
+  height:200rpx;
+  width: 200rpx;
+}
+.order2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}

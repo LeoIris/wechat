@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+
+
+<view class="wrap">
+  <view class="loge">
+    <image src="../../images/login/loginbg.jpg"></image>
+    <text>片区蔬菜系统欢迎登陆</text>
+  </view>
+
+
+  <view class="login">
+    <form bindsubmit="login">
+      <view  class="username">
+        <label>用户名</label>
+        <input name="username" type='text' placeholder="请输入用户名"></input>
+      </view>
+      <view class="pwd">
+        <label>密码</label>
+        <input name="pwd" type='password' placeholder="请输入密码"></input>
+      </view>
+      <view wx:if="{{ShowErrMsg}}" class="errmsg"> 
+        <label>用户名或密码不正确</label>
+      </view>
+      <button form-type="submit">登录</button>
+    </form>
+  </view>
+
+</view>

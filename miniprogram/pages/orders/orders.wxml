@@ -1,0 +1,38 @@
+<!--pages/orders/orders.wxml-->
+<!-- 监听自定义事件 -->
+<Tabs tabs="{{tabs}}" bindtabsitemchange="handletabsitemchange">
+  <block wx:if="{{tabs[0].isactive}}">
+
+    <view class="saysomething">
+      因微信小程序支付功能需要商户营业执照备案，本项目支付功能暂不支持，此功能解决方案会在我的个人GitHub上展示
+    </view>
+     <view class="main">
+      <view wx:for="{{paid_database}}" wx:key="_id" class="order_item">
+        <van-card num="电话:{{item.phone_number}}" price="{{item.money}}" desc="地址:{{item.address}}" title="姓名:{{item.name}}" thumb="{{item.product[0].img}}" />
+        <!-- <view slot="order">
+    {{item.ordernum}}
+  </view> -->
+      </view>
+    </view>
+
+  </block>
+
+
+  <block wx:elif="{{tabs[1].isactive}}">
+    <!-- 显示订单信息 -->
+    <view class="main">
+      <view wx:for="{{orderdatabase}}" wx:key="_id" class="order_item">
+        <van-card num="{{item.num}}" price="{{item.price}}" desc="订单编号{{item.ordernum}}" title="{{item.name}}" thumb="{{item.img}}" />
+        <!-- <view slot="order">
+    {{item.ordernum}}
+  </view> -->
+      </view>
+    </view>
+
+  </block>
+  <block wx:elif="{{tabs[2].isactive}}">
+
+  <button plain  style="margin:45% auto" type="primary" open-type="contact">请联系客服</button>
+
+  </block>
+</Tabs>

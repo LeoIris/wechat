@@ -1,0 +1,19 @@
+<!--pages/admin_master/admin_master.wxml-->
+<view class="operation">
+  <view class="operation_1" bindtap="operation" data-page="../admin_addproduct/admin_addproduct">
+    <image src="cloud://huanjing-tbskh.6875-huanjing-tbskh-1301383507/admin/master/上传.png" style="width:100rpx;height:100rpx"></image>
+    <view>上传商品</view>
+  </view>
+ 
+  <view class="operation_1" bindtap="operation" data-page="../admin_order/admin_order">
+    <image src="cloud://huanjing-tbskh.6875-huanjing-tbskh-1301383507/admin/master/ico_财务管理_订单审核.png" style="width:100rpx;height:100rpx"></image>
+    <view>管理订单</view>
+  </view>
+
+
+  <view class="operation_1" bindtap="operation" data-page="../admin_product/admin_product">
+    <image src="cloud://huanjing-tbskh.6875-huanjing-tbskh-1301383507/admin/master/修改.png" style="width:100rpx;height:100rpx"></image>
+    <view>管理商品</view>
+  </view>
+
+</view>

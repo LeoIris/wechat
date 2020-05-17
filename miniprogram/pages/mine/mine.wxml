@@ -1,0 +1,83 @@
+<!--pages/mine/mine.wxml-->
+
+<!-- 登陆后的个人中心mine -->
+<!-- 图片显示部分 -->
+<view class="infowrap">
+  <view wx:if="{{userinfo.avatarUrl}}" class="imgwrap">
+    <image class="url_bg" src="{{userinfo.avatarUrl}}"> </image>
+    <view class="userinfo">
+      <image class="small_img" src="{{userinfo.avatarUrl}}"></image>
+    </view>
+    <view class="username">{{userinfo.nickName}}</view>
+  </view>
+  <view wx:else class="user_button">
+    <navigator url="../logbutton/logbutton">登录 </navigator>
+  </view>
+</view>
+
+<!-- 功能部分 -->
+<view class="user_content">
+  <view class="user_main">
+    <!-- 历史足迹 -->
+    <view class="history_wrap">
+      <!-- <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的店铺</view>
+      </navigator> -->
+      <navigator url="../collectbox/collectbox">
+        <view class="his_num">{{collectnum}}</view>
+        <view class="his_name">收藏的商品</view>
+      </navigator>
+    
+      <navigator url="../login/login">
+        <view class="his_num">商家入口</view>
+        <view class="his_name">商品发布</view>
+      </navigator>
+    </view>
+    <!-- 我的订单 -->
+    <view class="order_wrap">
+      <view class="order_title">我的订单</view>
+      <view class="order_content">
+        <navigator url="../orders/orders?type=1">
+          <view class="iconfont icon-tubiaolunkuo-"></view>
+          <view class="order_name">已付款订单</view>
+        </navigator>
+        <navigator url="../orders/orders?type=2">
+          <view class="iconfont icon-fukuantongzhi"></view>
+          <view class="order_name">待付款订单</view>
+        </navigator>
+        <navigator url="../orders/orders?type=3">
+          <view class="iconfont icon-che"></view>
+          <view class="order_name">待收货</view>
+        </navigator>
+        <navigator url="../orders/orders?type=3">
+          <view class="iconfont icon-tubiaolunkuo-"></view>
+          <view class="order_name">退款</view>
+        </navigator>
+      </view>
+
+    </view>
+    <!-- 收货地址管理 -->
+    <navigator url="../address/address">
+    <view class="address-wrap">收货地址管理</view></navigator>
+    <!-- 应用信息相关 -->
+    <view class="appinfo_wrap">
+      <view class="appinfo_item appinfo_contact">
+        <text style="padding:9rpx ">联系客服</text>
+        <button plain size="mini" type="default" open-type="contact">请联系客服</button>
+        <text style="padding:9rpx ">电话号码:159***75</text>
+      </view>
+      <view class="appinfo_item">相关信息</view>
+    </view>
+    <!-- 把应用推荐给其他人 -->
+    <view  style="padding:5rpx;background-color:white" class="recommend_wrap"><button plain  type="default" open-type="share">分享本应用</button></view>
+  </view>
+</view>
+<view>
+  <van-tabbar active="{{ active }}" bindtap="onChange">
+    <van-tabbar-item data-num="1" icon="home-o">主页</van-tabbar-item>
+    <van-tabbar-item data-num="2" icon="shopping-cart-o" info="{{cartnumber>0?cartnumber:''}}">购物车</van-tabbar-item>
+    <van-tabbar-item data-num="3" icon="label-o">订单</van-tabbar-item>
+    <van-tabbar-item data-num="4" icon="setting-o">我的</van-tabbar-item>
+  </van-tabbar>
+</view>

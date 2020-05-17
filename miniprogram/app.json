@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/car/car",
+    "pages/detail/detail",
+    "pages/orders/orders",
+    "pages/mine/mine",
+    "pages/pay/pay",
+    "pages/logbutton/logbutton",
+    "pages/collectbox/collectbox",
+    "pages/address/address",
+    "pages/admin_master/admin_master",
+    "pages/admin_addproduct/admin_addproduct",
+    "pages/admin_order/admin_order",
+    "pages/admin_product/admin_product",
+    "pages/admin_update_product/admin_update_product",
+    "pages/admin_orderdetail/admin_orderdetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index"
+  }
+}

@@ -1,0 +1,195 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
+	},
+	"appid": "wxc3a070daf5491c52",
+	"projectname": "shizhan",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录功能",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登陆跳转首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "详情界面",
+					"pathName": "pages/detail/detail",
+					"query": "detailid=f149f6775e98103f0034c2ad7ab811be",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "car",
+					"pathName": "pages/car/car",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "order",
+					"pathName": "pages/orders/orders",
+					"query": "type=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户登录按钮",
+					"pathName": "pages/logbutton/logbutton",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "collectbox",
+					"pathName": "pages/collectbox/collectbox",
+					"query": "detailid=f149f6775e98103f0034c2ad7ab811be",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pay支付页面",
+					"pathName": "pages/pay/pay",
+					"query": "detailid=f149f6775e98103f0034c2ad7ab811be",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地址",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商户登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "admin_master",
+					"pathName": "pages/admin_master/admin_master",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "admin_addproduct",
+					"pathName": "pages/admin_addproduct/admin_addproduct",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "admin_product",
+					"pathName": "pages/admin_product/admin_product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "admin_update_product",
+					"pathName": "pages/admin_update_product/admin_update_product",
+					"query": "id=da5f6ae65eac58a1003317a840cb7d0b",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "admin_order",
+					"pathName": "pages/admin_order/admin_order",
+					"query": "id=da5f6ae65eac58a1003317a840cb7d0b",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "admin_orderdetail",
+					"pathName": "pages/admin_orderdetail/admin_orderdetail",
+					"query": "id=da5f6ae65eae7bf800419de65889bf36",
+					"scene": null
+				}
+			]
+		}
+	}
+}

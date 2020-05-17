@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/Tabs",
+    "van-card": "@vant/weapp/card/index"
+  },
+  "navigationBarTitleText": "我的订单"
+}

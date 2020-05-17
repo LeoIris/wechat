@@ -1,0 +1,43 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bindtap="onSearch" />
+<!-- //轮播图部分 -->
+<swiper autoplay indicator-dots circular>
+  <swiper-item wx:for="{{banners}}" wx:key="_id">
+    <navigator url="{{item.url}}">
+      <image src="{{item.src}}"></image>
+    </navigator>
+  </swiper-item>
+</swiper>
+
+<!-- //menu部分 -->
+<view class="menu">
+  <view class="menusub" wx:for="{{menu}}" wx:key="_id">
+    <image src="{{item.src}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+
+</view>
+
+<!-- //产品首页展示部分 -->
+<view class="products">
+  <navigator url="../detail/detail?detailid={{item._id}}" class="productsub" wx:for="{{products}}" wx:key="_id">
+    <image src="{{item.src}}"></image>
+    <view class="productsinfo">
+      <view>
+        <label>{{item.name}}</label>
+      </view>
+      <view>
+        <label class="price">￥{{item.price}}/kg </label>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+
+<view>
+  <van-tabbar active="{{ active }}" bindtap="onChange">
+    <van-tabbar-item data-num="1" icon="home-o">主页</van-tabbar-item>
+    <van-tabbar-item data-num="2" icon="shopping-cart-o" info="{{cartnumber>0?cartnumber:''}}">购物车</van-tabbar-item>
+    <van-tabbar-item data-num="3" icon="label-o">订单</van-tabbar-item>
+    <van-tabbar-item data-num="4" icon="setting-o">我的</van-tabbar-item>
+  </van-tabbar>
+</view>

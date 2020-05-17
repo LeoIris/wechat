@@ -1,0 +1,15 @@
+/* pages/admin_product/admin_product.wxss */
+
+.product_list_2 {
+  display: flex;
+  background-color: #eee;
+  border-bottom: 2rpx solid rgba(100, 97, 97, 0.315);
+  margin-bottom: 7rpx;
+  height: 15%;
+  align-items: center;
+}
+
+.product_list_4 {
+  flex: 1;
+  text-align: end
+}

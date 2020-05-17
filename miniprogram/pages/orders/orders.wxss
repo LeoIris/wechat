@@ -1,0 +1,5 @@
+/* pages/orders/orders.wxss */
+.saysomething{
+  margin: 35rpx;
+  color: rgba(134, 28, 28, 0.87)
+}

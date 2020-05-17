@@ -1,0 +1,94 @@
+/* pages/detail/detail.wxss */
+
+swiper {
+  height: 475rpx;
+  width: 96%;
+  align-self: center;
+  background-color: floralwhite;
+  border-radius: 20rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.introducebox {
+  margin: 7rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  width: 96%;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.collectbefore{
+  flex: 1;
+  border-left: 1rpx solid #edd;
+  color: gray
+}
+.collectafter{
+  flex: 1;
+  border-left: 1rpx solid #edd;
+  color: red
+}
+.detailprice {
+  flex: 1;
+  padding: auto 0;
+  margin: auto 3rpx;
+  color: rgb(230, 86, 86);
+  border-radius: 5rpx;
+}
+
+.introduce {
+  flex: 4;
+  height: 90%;
+  text-align: left;
+  color: rgba(255, 174, 0, 0.822);
+  border-right: 1rpx solid #edd;
+  border-left: 1rpx solid #edd;
+  padding-left: 20rpx;
+}
+
+.lastnum {
+  flex: 1;
+  color: gray;
+  margin: auto 3rpx;
+}
+
+.sender {
+  background: #edd;
+}
+
+.footer {
+  position: fixed;
+  left: 0rpx;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.cartsum, .submitorder {
+  height: 90rpx;
+  flex: 1;
+  background-color: red;
+}
+
+.cartsum {
+  color: white;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+}
+
+.submitorder {
+  color: white;
+  background-color: greenyellow;
+  border-top-right-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+}

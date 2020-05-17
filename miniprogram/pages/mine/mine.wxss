@@ -1,0 +1,134 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #edece8
+}
+.infowrap{
+  height:45vh;
+  background-color: red; 
+  overflow: hidden;
+  position: relative;
+}
+
+.imgwrap{
+  position: relative;
+}
+.url_bg{
+  height: 45vh;
+  width: 100%;
+  filter: blur(10rpx);
+}
+.userinfo{
+  position: absolute;
+  height: 150rpx;
+  width: 150rpx;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  text-align: center;
+  /* border-radius: 50%; */
+}
+.small_img{
+  position: relative;
+ width: 150rpx;
+ height: 150rpx;
+ /* border-radius: 50%; */
+  align-items: center;
+  overflow: hidden
+}
+.username{
+  color: white;
+   position: absolute;
+  height: 150rpx;
+  width: 150rpx;
+  left: 50%;
+  top: 65%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.user_button{
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%);
+  border: 1rpx solid greenyellow;
+  color: greenyellow;
+  font-size: 38rpx;
+  padding: 21rpx 45rpx;
+  border-radius: 15rpx;
+}
+.user_content{
+  position: relative;
+}
+.user_main{
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+.history_wrap{
+  background-color: #fff;
+  display: flex;
+}
+.history_wrap navigator{
+  flex: 1;
+  text-align: center;
+  padding: 5rpx 0
+}
+
+.his_num{
+  color: rgba(255, 0, 0, 0.651)
+}
+.his_name{
+  color: rgba(0, 0, 0, 0.89)
+}
+.order_wrap{
+background-color: #fff;
+margin-top: 15rpx;
+}
+.order_title{
+ padding: 10rpx;
+ border-bottom: 2rpx solid #ccc;
+
+}
+.order_content{
+  
+  display: flex;
+}
+.order_content navigator{
+  flex: 1;
+  text-align: center;
+  margin: 7rpx;
+  padding: 15rpx auto;
+}
+.iconfont{
+  color: rgba(255, 0, 0, 0.918)
+}
+.order_name{}
+.address-wrap{
+  background-color: #fff;
+  margin-top: 10rpx;
+  padding: 15rpx;
+
+}
+.appinfo_wrap{
+background-color: #fff;
+  margin-top: 10rpx;
+}
+.appinfo_item{
+  background-color: #fff;
+  margin-top: 10rpx;
+  border-bottom: 5rpx solid #eee;
+  padding:7rpx 10rpx;
+  
+}
+.appinfo_contact{
+  display: flex;
+  justify-content: space-between;
+}
+.recommend_wrap{
+  background-color: #fff;
+  margin-top: 10rpx;
+   border-bottom: 5rpx solid #eee;
+  padding:7rpx 10rpx;
+}

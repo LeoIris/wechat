@@ -1,0 +1,12 @@
+/* pages/admin_addproduct/admin_addproduct.wxss */
+.upload_3{
+  height: 60rpx;
+}
+.img{
+  background-color: #eee
+}
+.upload_1{
+  background-color: rgba(226, 222, 226, 0.678); 
+  border:  2rpx solid rgb(214, 210, 205);
+  margin: 7rpx;
+}

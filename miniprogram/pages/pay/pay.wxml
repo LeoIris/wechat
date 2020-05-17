@@ -1,0 +1,79 @@
+<!-- 大概地址模块 -->
+<view class="address">
+  <button bindtap="address" style="width:60%;height:80rpx;display:fixed;top:0rpx" plain="true" type="primary">添加所在城市地址</button>
+
+  <view class="address_1">
+    <view>{{name}}</view>
+    <view>{{phone_number}}</view>
+    <view>{{address}}</view>
+  </view>
+  
+</view>
+
+
+
+<!-- 详细地址模块 -->
+<view style='color:gray;font-size: 34rpx;padding:20rpx 35rpx;border-bottom:0.5rpx #ededed solid;width:96%'>自定义收货所在小区详细的地址和备注：</view>
+<view class="selfaddress">
+<navigator url="../address/address">
+  <view wx:if="{{hasAddress}}" class="orders-address">
+    <text class="orders-address-name">收货人: {{address2.name}}</text>
+    <view class="orders-address-phone">电话: {{address2.phone}}</view>
+
+    <view class="orders-address-school">小区名: {{school_Arr[address2.schoolName]}}</view>
+    <view class="orders-address-xiaoqu">小区楼号: {{ address_Arr[address2.addressItem]}}</view>
+
+    <view class="orders-address-detail">宿舍楼: {{address2.detail}}</view>
+    <view class="orders-address-text">备注: {{address2.message}}</view>
+  </view>
+  <view wx:else class="orders-no-address">添加详细收货地址</view>
+</navigator>
+</view>
+<!-- <button bindtap="handlepaid" mini primary="true">支付￥{{paymoney}}元</button>  -->
+
+
+
+
+
+<!-- 商品展示模块 -->
+<scroll-view class="product" style="height: 250rpx;background-color: #eea;width:96%" scroll-y="true">
+  <block wx:for="{{product}}" wx:key="_id">
+    <!-- 商品信息模块 -->
+    <view class="product_list">
+      <view class="product_list_1">
+        <view class="product_list_3">
+          <image src="{{item.img}}" style="width:100rpx;height:100rpx"></image>
+          <view class="product_list_2">
+            <view style="font-size:20px">{{item.name}}</view>
+            <view style="color:red">￥:{{item.price}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 商品数量功能模块 -->
+      <view   class="product_list_4" >
+        <view style="padding: 65rpx;width:96%">数量：{{item.num}}</view>
+      </view>
+    </view>
+    <view class="line"></view>
+  </block>
+</scroll-view>
+
+
+
+<!-- 订单备注 -->
+<view style="background-color:blue" class="beizhu" style="background: #eee;margin: 10px auto;wxcs_style_margin: 20rpx auto;width: 96%;">
+  <view>备注：</view>
+  <textarea placeholder="请填入备注" bindinput="beizhu"></textarea>
+</view>
+
+
+<!-- 按钮 -->
+<view class="anniu">
+  <!-- <button open-type="contact"  type="primary">联系客服</button> -->
+
+  <!-- <button size="mini" class="pay" bindtap="pay">支付￥{{money}}元</button> -->
+  <view class="pay" bindtap="pay" style="display: flex;align-items: center;justify-content: center;background-color: #eaaa;width:96%;height:60rpx;border-radius:30rpx">
+    <view>结算</view>
+    <view>（￥{{money}}）</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+/* pages/logbutton/logbutton.wxss */
+.isshowlog {
+  height: 50%;
+  width: 250rpx;
+  background: white;
+  /* line-height: 1200rpx; */
+  text-align: center;
+  margin: 450rpx;
+  align-self: center
+}

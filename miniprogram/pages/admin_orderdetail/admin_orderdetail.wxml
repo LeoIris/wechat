@@ -1,0 +1,36 @@
+<!--pages/admin_orderdetail/admin_orderdetail.wxml-->
+<!-- 收货信息 -->
+<view class="detail1">
+  <view class="address1">
+    <image src="cloud://huanjing-tbskh.6875-huanjing-tbskh-1301383507/many/地址.png"></image>
+  </view>
+
+  <view class="address2">
+    <view class="add22">
+      <view>{{orderdetail.name}}</view>
+      <view>联系方式：{{orderdetail.phone_number}}</view>
+    </view>
+    <view>{{orderdetail.address}}</view>
+  </view>
+</view>
+
+<!-- 商品信息 -->
+<block wx:for="{{orderdetail.product}}" wx:key="_id">
+
+  <navigator class="order21" url="../detail/detail?detailid={{item._id}}">
+    <view class="order22">
+      <image src="{{item.img}}"></image>
+      <view class="order23">
+        <view>{{item.name}}</view>
+        <view>商品:{{item.num}}件</view>
+      </view>
+    </view>
+  </navigator>
+</block>
+
+
+<!-- 订单信息 -->
+<view class="detail3">
+  <view>订单金额：{{orderdetail.money}}</view>
+  <view>备注：{{orderdetail.beizhu}}</view>
+</view>

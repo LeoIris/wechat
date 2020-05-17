@@ -1,0 +1,15 @@
+<!--pages/collectbox/collectbox.wxml-->
+
+<!-- 显示collected信息 -->
+<view class="main">
+  <view wx:for="{{ collectbox}}" wx:key="_id" class="order_item">
+  <navigator url="../detail/detail?detailid={{item._id}}">
+  <van-card
+  price="{{item.price}}"
+  desc="{{item.ordernum}}"
+  title="{{item.name}}"
+  thumb="{{item.detailimg[0]}}"
+/>
+</navigator>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/admin_order/admin_order.wxml-->
+<block wx:for="{{order}}" wx:key="_id">
+  <navigator class="order" url="../admin_orderdetail/admin_orderdetail?id={{item._id}}">
+    <view class="order1">
+      <view></view>
+      <view>{{state[item.type-1]}}</view>
+    </view>
+    <view class="order2">
+      <image src="{{item.product[0].img}}"></image>
+      <view class="order3">
+      <view>收件人姓名:{{item.name}}</view>
+        <view>{{item.product[0].name}}</view>
+        <view>商品共{{item.product.length}}件 一共{{item.money}}元</view>
+      </view>
+    </view>
+  </navigator>
+
+</block>

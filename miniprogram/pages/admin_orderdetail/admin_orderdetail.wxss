@@ -1,0 +1,41 @@
+/* pages/admin_orderdetail/admin_orderdetail.wxss */
+.detail1{
+  display: flex;
+  height: 140rpx;
+  background-color: white;
+  border: 1rpx solid rgb(219, 214, 214) ;
+  padding: 20rpx
+}
+.address1{
+  flex:2 ;
+}
+.address1 image{
+  height: 100%;
+  width: 100%
+}
+.address2{
+  flex: 7
+}
+.order22{
+  display: flex;
+  height: 160rpx;
+  background-color: white;
+  margin-top: 15rpx;
+  justify-content: center;
+  align-items: center
+}
+.order22 image{
+  flex: 1;
+  height: 100%;
+  width: 100%;
+
+}
+.order23{
+  flex: 4;
+  padding-left: 30rpx 
+}
+.detail3{
+  background-color: white;
+  margin-top: 20rpx;
+  height: 260rpx
+}

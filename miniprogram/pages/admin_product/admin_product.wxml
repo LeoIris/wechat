@@ -1,0 +1,24 @@
+<!--pages/admin_product/admin_product.wxml-->
+
+<block wx:for="{{products}}" wx:key="_id">
+<navigator url="../admin_update_product/admin_update_product?id={{item._id}}">
+<view class="product_list">
+  <view class="product_list_1">
+    <!-- 选择框 负责传递商品id -->
+    <view class="product_list_2">
+      <image src="{{item.src}}" style="width:100rpx;height:100rpx"></image>
+      <view class="product_list_3">
+        <view style="font-size:20px">{{item.name}}</view>
+        <view style="color:red">￥:{{item.price}}</view>
+      
+      </view>
+     
+       <view class="product_list_4">存货数量：{{item.num}}</view></view>
+     
+    
+  </view>
+</view>
+</navigator>
+<!-- 商品信息模块 -->
+
+</block>

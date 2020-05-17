@@ -1,0 +1,15 @@
+<!--pages/search/search.wxml-->
+<!-- <van-search  placeholder="请输入搜索关键词" show-action bindconfirm="search" /> -->
+<view class="search">
+  <input placeholder="请输入要搜索的商品" bindconfirm="search" confirm-type="done"></input>
+  <image src="cloud://huanjing-tbskh.6875-huanjing-tbskh-1301383507/search/搜索框.png" style="width:50rpx;height:50rpx"></image>
+</view>
+
+<view class="list" wx:for="{{search}}" wx:key="_id">
+  <navigator class="list_1" url="../detail/detail?id={{item._id}}">
+    <image src="{{item.src}}" style="width:100rpx;height:100rpx;margin-left: 10rpx;"></image>
+    <view>商品：{{item.name}}</view>
+    <view style="margin-right: 50rpx;">价格：{{item.price}}</view>
+  </navigator>
+  <view class="line"></view>
+</view>

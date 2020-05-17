@@ -1,0 +1,15 @@
+/* pages/search/search.wxss */
+.search{
+  display: flex;
+  justify-content: space-around;
+  border: 7rpx solid rgba(255, 0, 0, 0.753);
+  border-radius: 25rpx;
+  height: 55rpx;
+  align-items: center
+}
+.list{
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
