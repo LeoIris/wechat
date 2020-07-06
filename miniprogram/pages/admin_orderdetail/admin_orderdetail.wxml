@@ -17,7 +17,7 @@
 <!-- 商品信息 -->
 <block wx:for="{{orderdetail.product}}" wx:key="_id">
 
-  <navigator class="order21" url="../detail/detail?detailid={{item._id}}">
+  <navigator class="order21" url="../detail/detail?id={{item._id}}">
     <view class="order22">
       <image src="{{item.img}}"></image>
       <view class="order23">

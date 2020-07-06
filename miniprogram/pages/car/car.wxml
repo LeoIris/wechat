@@ -3,7 +3,7 @@
   <view class="product_list">
     <view class="product_list_1">
       <!-- 选择框 负责传递商品id -->
-      <checkbox-group bindchange="xuanze" data-id="{{item._id}}">
+      <checkbox-group bindchange="xuanze" data-checked="{{item.checked}}"  data-id="{{item._id}}">
         <checkbox value="{{item._id}}" checked="{{item.checked}}"></checkbox>
       </checkbox-group>
       <view class="product_list_3">

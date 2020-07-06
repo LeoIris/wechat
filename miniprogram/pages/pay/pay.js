@@ -134,7 +134,7 @@ Page({
     wx.getSetting({
       success(res) {
         console.log(res, "这是getSetting  res")
-        if (res.authSetting['scope.address']) {
+        if (!res.authSetting['scope.address']) {
           wx.authorize({
             scope: 'scope.address',
             success() {
@@ -153,11 +153,22 @@ Page({
         } else {
           wx.openSetting({
             success(res) {
-              console.log(res.authSetting)
-              res.authSetting = {
-                // "scope.userInfo": true,
-                // "scope.userLocation": true
-              }
+              console.log(res.authSetting,'sadasd')
+              wx.chooseAddress({
+                success(res) {
+                  console.log(res, "wx.authorize res")
+                  that.setData({
+                    name: res.userName,
+                    phone_number: res.telNumber,
+                    address: res.provinceName + res.cityName + res.countyName + res.detailInfo
+                  })
+                }
+              })
+              // res.authSetting = {
+              //    "scope.userInfo": true,
+              //   "scope.userLocation": true
+                
+              // }
             }
           })
         }

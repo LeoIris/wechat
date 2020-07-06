@@ -13,14 +13,17 @@ Page({
   //接收首页传过来的ID并且找出其对应的集合传给detailinfo
   onLoad: function(options) {
      console.log(options)
-    const {
+    let {
       detailid
     } = options
+    if(detailid== undefined){
+      detailid=options.id
+    }
      console.log(detailid,"asdasdasdas")
     db.collection('products').where({
       _id: detailid
     }).get().then(res => {
-      // console.log(res.data[0])
+      //console.log(res.data[0])
       const detailinfo = res.data[0]
       //传过来的是个对象
       this.setData({

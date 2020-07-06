@@ -98,24 +98,30 @@ Page({
   // 选择事件
   xuanze: function(e) {
     let that = this
-    // console.log(e)
-    that.setData({
-      delet_id: that.data.delet_id.concat(e.detail.value[0])
-    })
+     console.log(e)
+    if (e.detail.value[0]!=undefined){
+      that.setData({
+        delet_id: that.data.delet_id.concat(e.detail.value[0])
+        // delet_id: e.detail.value
+      })
+    }
+    
     console.log(this.data.delet_id)
     if (e.detail.value.length !== 0) {
-      db.collection('cart').doc(e.target.dataset.id).update({
+    // if (e.currentTarget.dataset.checked == "false") {
+      db.collection('cart').doc(e.currentTarget.dataset.id).update({
         data: {
           checked: "true"
         },
-        success: function(res) {
+        success: function() {
           that.onLoad()
         }
       })
     } else {
-      db.collection('cart').doc(e.target.dataset.id).update({
+      db.collection('cart').doc(e.currentTarget.dataset.id).update({
         data: {
-          checked: "false"
+          // 究极大坑， 必须设为空，不能为false
+          checked: "" 
         },
         success: function() {
           that.onLoad()
@@ -220,5 +226,8 @@ Page({
     })
   },
 
-
+  onHide: function () {
+     app.cartNumber =this.product.length
+    console.log("hide")
+  },
 })
